@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
 	fmt.Println("Hello", "World")
@@ -40,17 +43,17 @@ func main() {
 	//The Fprint Family of Functions in fmt Package
 
 	//Writes values to a specified writer without adding a newline:
-	file, _ := os.Create("output.txt")
-	fmt.Fprint(file, "Hello", "World") // Writes: HelloWorld
+	file1, _ := os.Create("output.txt")
+	fmt.Fprint(file1, "Hello", "World") // Writes: HelloWorld
 
 	//Writes values to a specified writer with spaces between them and adds a newline:
-	file, _ := os.Create("output.txt")
-	fmt.Fprintln(file, "Hello", "World") // Writes: Hello World\n
+	file2, _ := os.Create("output.txt")
+	fmt.Fprintln(file2, "Hello", "World") // Writes: Hello World\n
 
 	//Writes formatted text to a specified writer:
-	file, _ := os.Create("output.txt")
-	name := "Go"
-	fmt.Fprintf(file, "Language: %s, Version: %d\n", name, 1)
+	file3, _ := os.Create("output.txt")
+	name = "Go"
+	fmt.Fprintf(file3, "Language: %s, Version: %d\n", name, 1)
 
 	/*
 		Common Use Cases
